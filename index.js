@@ -14,10 +14,10 @@ alert('O valor de B é ' + B);
 
 alert('Exercício 2');
 
-const total_de_eleitores = prompt('Total de eleitores:');
-const votos_brancos = prompt('Votos brancos:');
-const votos_nulos = prompt('Votos nulos:');
-const votos_validos = prompt('Votos validos:');
+const total_de_eleitores = Number.parseInt(prompt('Total de eleitores:'));
+const votos_brancos = Number.parseInt(prompt('Votos brancos:'));
+const votos_nulos = Number.parseInt(prompt('Votos nulos:'));
+const votos_validos = Number.parseInt(prompt('Votos validos:'));
 
 const percentual_votos_brancos = (votos_brancos/total_de_eleitores)*100;
 const percentual_votos_nulos = (votos_nulos/total_de_eleitores)*100;
@@ -29,7 +29,7 @@ alert (`O percentual de votos validos é ${percentual_votos_validos}%`);
 
 alert('Exercício 3');
 
-const custo_de_fábrica = Number(prompt('Custo de fábrica:'));
+const custo_de_fábrica = Number.parseFloat(prompt('Custo de fábrica:'));
 let custo_do_distribuidor;
 let custo_do_imposto;
 let custo_final_ao_consumidor;
@@ -44,13 +44,13 @@ alert('O custo final ao consumidor é ' + custo_final_ao_consumidor);
 
 alert ('Exercício 4');
 
-const salário_fixo = Number(prompt('Salário fixo:'));
+const salário_fixo = Number.parseFloat(prompt('Salário fixo:'));
 
-const número_de_carros_vendidos = Number(prompt('Número de carros vendidos: '));
+const número_de_carros_vendidos = Number.parseInt(prompt('Número de carros vendidos: '));
 
-const valor_do_carro_vendido = Number(prompt('Valor do carro vendido:'));
+const valor_do_carro_vendido = Number.parseFloat(prompt('Valor do carro vendido:'));
 
-const valor_da_comissão = Number(prompt('Informe o valor da comissão por carro vendido:'));
+const valor_da_comissão = Number.parseFloat(prompt('Informe o valor da comissão por carro vendido:'));
 
 let valor_das_vendas;
 
@@ -72,7 +72,7 @@ alert ('Salário final: ' + salário_final);
 
 alert('Exercício 5');
 
-const temperatura_em_graus_celsius = prompt('Temperatura em graus celsius: ');
+const temperatura_em_graus_celsius = Number.parseFloat(prompt('Temperatura em graus celsius: '));
 
 temperatura_em_graus_fahrenheit=temperatura_em_graus_celsius*1.8+32;
 
@@ -80,9 +80,9 @@ alert('Conversão para fahrenheit: ' + temperatura_em_graus_fahrenheit + ' ºF')
 
 alert ('Exercício 6:');
 
-const numero_1 = prompt('Insira um número: ');
+const numero_1 = Number.parseInt(prompt('Insira um número: '));
 
-const numero_2 = prompt('Insira outro número: ');
+const numero_2 = Number.parseInt(prompt('Insira outro número: '));
 
 if(numero_1==numero_2){alert('Os números são iguais')} else if (numero_1>numero_2){alert('O primeiro número é maior.')}else{alert('O segundo número é maior.');}
 
@@ -94,6 +94,17 @@ let total_da_compra;
 
 if(numero_de_maçãs<12){total_da_compra = numero_de_maçãs*0.3; alert('O total da compra é ' + total_da_compra + ' reais.');}else if(numero_de_maçãs>11){total_da_compra = numero_de_maçãs*0.25; alert('O total da compra é ' + total_da_compra + ' reais.');}else{alert('Número inválido.');}
 
+alert ('Exercício 8: ');
+
+let nome = prompt("Informe seu primeiro nome.")
+        let idade = parseInt(prompt("Informe sua idade."))
+        if (idade <= 0){
+            alert("Informe um valor correto de idade!")
+        }
+        else{
+            alert("Seu nome é " + nome + " e seu nome tem " + nome.length + " letras.<br>")
+            alert("Sua idade é de " + idade + " anos e você nasceu no ano de " + (2022-idade) + ".")
+        }
 
 alert ('Exercício 9');
 
